@@ -1,0 +1,17 @@
+digraph_unw:
+  type: json.JSONDataset
+  filepath: data/graph/digraph_unw.json
+  save_args:
+    indent: 2
+
+digraph_wei:
+  type: json.JSONDataset
+  filepath: data/graph/digraph_wei.json
+  save_args:
+    indent: 2
+
+# graph_plot:
+#   type: matplotlib.MatplotlibWriter
+#   filepath: data/figures/digraph.eps
+#   save_args:
+#     format: eps

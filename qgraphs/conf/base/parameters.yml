@@ -1,0 +1,26 @@
+### New graph parameters
+
+new_graph:
+  vers: 11 # Change this value to add new graph, then set to zero for test runs
+  node_no: 16
+  edge_p: 0.1
+
+digraph_adj_weight:
+  method: scale
+  num: 3
+
+# QGraph model
+# qgraph_model:
+#   n_data = int(np.ceil(np.log2(n_vertices)))
+#   n_extra: 1
+#   n_wires = n_data+n_extra
+#   n_layers: 3
+#   rot: 'Rxyz'
+#   mode: 'hybrid'
+#   iters: 10
+#   epochs: 2000
+#   log_interv: 10
+#   scaler: np.pi
+#   shots: 1000 # ignored for state vector
+#   seed: 2024
+#   thr: 0.05 # Optimum to br determined
