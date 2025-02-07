@@ -10,9 +10,11 @@ graph representation, operation and use.*
   This would allow training a 1-step (adjacency) model and then using such models<br/>
   (and their trained params) to analyse node-to-node
   reachability in n-steps (with some probability).
-- Subsequently, create a notebook `pl_qgraphs_app_v1_XX_n_steps.ipynb`, to test n_steps extension.
-- Add explanation of changes in v1.18+ in  `pl_qgraphs_main_v1_XX_versions.ipynb`.
-- Add mathematical foundations for n_step analysis in `pl_qgraphs_main_v1_XX_versions.ipynb`.
+- Subsequently, create a notebook `pl_qgraphs_app_v1_18_n_steps.ipynb`, to test n_steps extension.<br/>
+  Example of how to fetch graph and training data from logs are in `pl_qgraphs_analz_v1_17.ipynb`.
+- Add explanation of changes in v1.18+ in  `pl_qgraphs_main_v1_18_versions.ipynb`.
+- Add mathematical foundations for n_step analysis in `pl_qgraphs_main_v1_18_versions.ipynb`.
+- Keep all version numbers consistent.
 
 ### Folders
 - legacy: previous versions dated with their time of their removal (includes legacy utilities)
