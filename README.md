@@ -26,9 +26,10 @@ Log files and folders related to training have the following naming convention:
 - example: `bench_rand_v8_e14_n3_x1_lays3_Rxyz_cs8_ep2000_graph.eps`
 
 Logs are located in the following sub-folders:
+- data: Additional data files
 - graphs: definition of unweighted (unw) and weighted (wei) digraphs (in networkx format), naming convention:
 - figures: figures and diagrams in 'eps' format
 - training: training hyper-parameters, model parameters, input and output graphs
 - analysis: analysis of model runs and their results
-- legacy_graphs: legacy folder "sample_graphs" with some of the test graphs included
+- legacy_graphs: legacy folder "sample_graphs" with some of the older test graphs included
 ...

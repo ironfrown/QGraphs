@@ -32,7 +32,7 @@ from IPython.display import clear_output
 
 ### Draw a digraph
 def draw_digraph(G, ax=None, weight_prec=3, font_size=12, 
-                 rcParams=(8, 6), save_plot=None):
+                 rcParams=(8, 6), draw_plot=True, save_plot=None):
     
     # Set graph plotting parameter
     pos = nx.shell_layout(G)
@@ -54,12 +54,14 @@ def draw_digraph(G, ax=None, weight_prec=3, font_size=12,
     if save_plot is not None:
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         plt.savefig(save_plot, format='eps')
-    plt.draw()
+    if draw_plot:
+        plt.show()
+    plt.close()
 
 
 ### Draw a weighted digraph
 def draw_weighted_digraph(G, attr_name, ax=None, weight_prec=3, font_size=12, 
-                          title='Weighted digraph', rcParams=(8, 6), save_plot=None):
+                          title='Weighted digraph', rcParams=(8, 6), draw_plot=True, save_plot=None):
     
     # Set graph plotting parameter
     pos = nx.shell_layout(G)
@@ -95,7 +97,9 @@ def draw_weighted_digraph(G, attr_name, ax=None, weight_prec=3, font_size=12,
     if save_plot is not None:
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         plt.savefig(save_plot, format='eps')
-    plt.draw()
+    if draw_plot:
+        plt.show()
+    plt.close()
 
 
 ### Draw two weighted digraphs
@@ -170,9 +174,8 @@ def draw_weighted_digraphs(GS, titles=['Original digraph', 'Predicted digraph'],
         os.makedirs(os.path.dirname(save_plot), exist_ok=True)
         plt.savefig(save_plot, format='eps')
     if draw_plot:
-        plt.draw()
-    else:
-        plt.close()
+        plt.show()
+    plt.close()
 
 
 ##### Graph saving and loading

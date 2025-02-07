@@ -1,6 +1,6 @@
 # Utility QGraph project settings
 # Author: Jacob Cybulski, ironfrown[at]gmail.com
-# Date: 2024
+# Date: 2024-2025
 
 ##### Initial settings
 
@@ -16,7 +16,7 @@ import json
 
 from utils.Files import *
 
-##### Project settings
+##### Default project settings
 
 class Log_Settings(object):
     LOG_NAME = 'logs'

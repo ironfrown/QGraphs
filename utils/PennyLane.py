@@ -115,7 +115,8 @@ class div_metrics(nn.Module):
 ### Plot probability distribution
 #   probs: list or tensor
 #   thres: all probs less that threshold will not be plotted
-def plot_hist(probs, scale=None, figsize=(8, 6), dpi=72, th=0, title='Measurement Outcomes'):
+def plot_hist(probs, scale=None, figsize=(8, 6), dpi=72, th=0, title='Measurement Outcomes',
+              save_plot=None, show_plot=True):
 
     # Prepare data
     n_probs = len(probs)
@@ -137,7 +138,16 @@ def plot_hist(probs, scale=None, figsize=(8, 6), dpi=72, th=0, title='Measuremen
     if scale is not None:
         dpi = fig.get_dpi()
         fig.set_dpi(dpi*scale)
-    plt.show()
+
+    if save_plot is not None:
+        os.makedirs(os.path.dirname(save_plot), exist_ok=True)
+        ext = os.path.splitext(save_plot)[1][1:]
+        plt.savefig(save_plot, format=ext)
+    if show_plot:
+        plt.show()
+    else:
+        plt.close()
+
 
 ### Plot probability distribution
 #   probs: list or tensor
@@ -145,7 +155,8 @@ def plot_hist(probs, scale=None, figsize=(8, 6), dpi=72, th=0, title='Measuremen
 def plot_compare_hist(probs_1, probs_2, scale=None, figsize=(8, 6), dpi=72, th=0, 
                       title_1='Measurement Outcomes 1', title_2='Measurement Outcomes 2',
                       xlabel_1='Results', xlabel_2='Results',
-                      ylabel_1='Probability', ylabel_2='Probability'):
+                      ylabel_1='Probability', ylabel_2='Probability',
+                      save_plot=None, show_plot=True):
 
     # Prepare data
     n_probs_1 = len(probs_1)
@@ -179,6 +190,14 @@ def plot_compare_hist(probs_1, probs_2, scale=None, figsize=(8, 6), dpi=72, th=0
     if scale is not None:
         dpi = fig.get_dpi()
         fig.set_dpi(dpi*scale)
-    plt.show()
+
+    if save_plot is not None:
+        os.makedirs(os.path.dirname(save_plot), exist_ok=True)
+        ext = os.path.splitext(save_plot)[1][1:]
+        plt.savefig(save_plot, format=ext)
+    if show_plot:
+        plt.show()
+    else:
+        plt.close()
 
 
