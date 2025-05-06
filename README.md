@@ -6,7 +6,7 @@ graph representation, operation and use.*
 
 ### Current work v1.18
 *Application of qgraphs to determine vertext-to-vertex reachability in n-steps*
-- Alter utils.Models to allow creation of n-steps models after training.<br/>
+- Alter utils. Models to allow creation of n-steps models after training.<br/>
   This would allow training a 1-step (adjacency) model and then using such models<br/>
   (and their trained params) to analyse node-to-node
   reachability in n-steps (with some probability).
